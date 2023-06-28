@@ -13,6 +13,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>restaurant-domain</module>
+        <module>restaurant-dataaccess</module>
+        <module>restaurant-messaging</module>
+        <module>restaurant-container</module>
     </modules>
 
 </project>

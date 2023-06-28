@@ -53,8 +53,7 @@ public class PaymentResponseKafkaListener implements KafkaConsumer<PaymentRespon
                             .paymentResponseAvroModelToPaymentResponse(paymentResponseAvroModel));
                 }
             } catch (OptimisticLockingFailureException e) {
-                //  NO-OP for optimistic lock. This means another thread finished the work,
-                //  do not throw error to prevent reading the data from kafka again!
+                //NO-OP for optimistic lock. This means another thread finished the work, do not throw error to prevent reading the data from kafka again!
                 log.error("Caught optimistic locking exception in PaymentResponseKafkaListener for order id: {}",
                         paymentResponseAvroModel.getOrderId());
             } catch (OrderNotFoundException e) {

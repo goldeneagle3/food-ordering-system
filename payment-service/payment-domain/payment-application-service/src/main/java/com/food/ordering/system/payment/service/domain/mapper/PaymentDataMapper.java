@@ -7,6 +7,7 @@ import com.food.ordering.system.domain.valueobject.OrderId;
 import com.food.ordering.system.payment.service.domain.dto.PaymentRequest;
 import com.food.ordering.system.payment.service.domain.entity.Payment;
 import com.food.ordering.system.payment.service.domain.event.PaymentEvent;
+import com.food.ordering.system.payment.service.domain.outbox.model.OrderEventPayload;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
@@ -23,7 +24,6 @@ public class PaymentDataMapper {
     }
 
 
-    /*
     public OrderEventPayload paymentEventToOrderEventPayload(PaymentEvent paymentEvent) {
         return OrderEventPayload.builder()
                 .paymentId(paymentEvent.getPayment().getId().getValue().toString())
@@ -35,5 +35,4 @@ public class PaymentDataMapper {
                 .failureMessages(paymentEvent.getFailureMessages())
                 .build();
     }
-     */
 }

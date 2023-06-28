@@ -32,8 +32,11 @@ spring:
     password: Mal.asiye3
     driver-class-name: org.postgresql.Driver
     platform: postgres
-    schema: classpath:init-schema.sql
-    initialization-mode: always
+  sql:
+    init:
+      mode: ALWAYS
+      schema-locations: classpath:init-schema.sql
+
 
 
 ## Kafka Configuration
